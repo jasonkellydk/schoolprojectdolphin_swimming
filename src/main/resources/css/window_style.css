@@ -1,0 +1,72 @@
+/*
+    Document   : Undecorator
+    Created on : Dec 19, 2014
+    Author     : In-SideFX
+    Description:
+        Demo app purpose
+*/
+
+.logo-label{
+    -fx-font-weight:bold;
+    -fx-text-fill: black;
+}
+.clientarea-background{
+    -fx-background-color: #BBDEFB;
+}
+.undecorator-label-titlebar{
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+}
+
+/*
+    The Stage background.
+    Currently a Rectangle node
+*/
+.decoration-background{
+   -fx-fill: black;
+
+    -fx-stroke-width: 0;
+    -fx-arc-width:7px;
+    -fx-arc-height:7px;
+}
+/*
+    Defines the rectangle responsible for the shadow
+*/
+.decoration-shadow{
+    visibility:hidden;
+    -fx-fill: black;
+    -fx-stroke-width: 0;
+    -fx-arc-width:0px;
+    -fx-arc-height:0px;
+}
+/*
+ Used to declare the definition of stage resize zone
+*/
+.decoration-resize{
+
+    -fx-fill:null;  /* avoid mouse events in the middle*/
+    -fx-border-color: transparent;
+    -fx-border-width: 10;
+    -fx-border-insets: 0;
+}
+
+.decoration-button-menu{
+  visibility:hidden;
+}
+
+
+
+
+.decoration-button-close{
+
+}
+
+
+.decoration-button-resize{
+    visibility:hidden !important;
+}
+
+#menu-img{
+    display: block;
+}
