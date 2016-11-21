@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <activejdbc.version>1.4.12</activejdbc.version>
         <application.title>${project.name}</application.title>
-        <mainClass>boot.main</mainClass>
+        <mainClass>boot.Bootstrap</mainClass>
         <copyright>Deveo</copyright>
     </properties>
 
