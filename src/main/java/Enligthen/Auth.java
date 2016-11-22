@@ -17,6 +17,7 @@ public class Auth {
 
     public boolean Login(String email, String password){
 
+
         /*
          * Checks if the email field is filled.
          */
@@ -33,7 +34,7 @@ public class Auth {
             User authUser = User.findFirst("email = ?",email);
             if(authUser != null){
                 String hashedPassword = (String) authUser.get("password");
-
+                System.out.println(authUser.getString("name"));
                 if(BCrypt.checkpw(password, hashedPassword)){
                      name = authUser;
 
@@ -41,6 +42,7 @@ public class Auth {
                 }
 
         }
+
         return false;
     }
 

@@ -13,6 +13,11 @@ import Seeds.*;
 
 public class Bootstrap extends Application{
 
+    private static Stage stage;
+
+    public static Stage getstage() {
+        return stage;
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -20,7 +25,7 @@ public class Bootstrap extends Application{
         Base.open();
 
 
-            /*
+        /*
          * This is the seeder classes (run when application database is empty)
          */
         /*roleTableSeeder roleSeed = new roleTableSeeder();
@@ -39,7 +44,7 @@ public class Bootstrap extends Application{
         stage.sizeToScene();
         stage.show();
 
-
+        Bootstrap.stage = stage;
         //http://stackoverflow.com/questions/23627340/login-application-with-1-stage-and-multiple-scene-in-javafx
 
     }

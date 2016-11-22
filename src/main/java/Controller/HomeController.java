@@ -55,9 +55,16 @@ public class HomeController {
         FXMLLoader fxmlLoader = new FXMLLoader(HomeController.class.getClassLoader().getResource("View/login.fxml"));
         BorderPane root = fxmlLoader.load();
         Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Stage stage = boot.Bootstrap.getstage();
+
+        Boolean fullscreen = stage.isFullScreen() ? true : false;
+            /*
+             * It seems like theres a bug in javafx for Mac that allows the fullscreen mode to flash
+             * https://bugs.openjdk.java.net/browse/JDK-8089209
+             */
+        stage.setFullScreen(false);
         stage.setScene(scene);
-        stage.setFullScreen(stage.isFullScreen());
+        stage.setFullScreen(fullscreen);
     }
 
     public void handleMenuAction(ActionEvent actionEvent) throws IOException {
