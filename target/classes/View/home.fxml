@@ -17,9 +17,9 @@
 
 <BorderPane fx:id="rootElement" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
    <top>
-      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-padding: 12 12 12 12; -fx-spacing: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-padding: 12 12 12 12; -fx-spacing: 10; -fx-background-color: #536DFE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
          <children>
-            <JFXButton fx:id="News" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="97.0" prefWidth="131.0" style="-fx-padding: 20px; -fx-background-color: #3F51B5;" text="News" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
+            <JFXButton fx:id="News" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="97.0" prefWidth="131.0" style="-fx-padding: 20px; -fx-background-color: #3F51B5;" text="News" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
@@ -34,7 +34,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="Members" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="97.0" prefWidth="131.0" style="-fx-padding: 20px; -fx-background-color: #3F51B5;" text="Members" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
+            <JFXButton fx:id="Members" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="97.0" prefWidth="131.0" style="-fx-padding: 20px; -fx-background-color: #3F51B5;" text="Members" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
@@ -49,7 +49,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="Statistic" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="97.0" prefWidth="131.0" style="-fx-padding: 20px; -fx-background-color: #3F51B5;" text="Statistic" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
+            <JFXButton fx:id="Statistic" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="97.0" prefWidth="131.0" style="-fx-padding: 20px; -fx-background-color: #3F51B5;" text="Statistic" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
@@ -64,7 +64,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="Settings" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="121.0" prefWidth="131.0" style="-fx-padding: 20 20; -fx-background-color: #3F51B5;" text="Settings" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
+            <JFXButton fx:id="Settings" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="121.0" prefWidth="131.0" style="-fx-padding: 20 20; -fx-background-color: #3F51B5;" text="Settings" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
@@ -90,9 +90,9 @@
    </top>
 
    <bottom>
-      <HBox alignment="CENTER" prefHeight="42.0" BorderPane.alignment="BOTTOM_RIGHT">
+      <HBox alignment="CENTER" prefHeight="42.0" style="-fx-background-color: #536DFE;" BorderPane.alignment="BOTTOM_RIGHT">
          <children>
-            <Label fx:id="loggedInUser" text="Label">
+            <Label fx:id="loggedInUser" text="Label" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="20.0" />
                </font>
@@ -105,11 +105,14 @@
             </Label>
             <JFXButton onAction="#handleLogout" style="-fx-background-color: #FF5252;" text="Sign out" textFill="WHITE">
                <HBox.margin>
-                  <Insets left="10.0" top="6.0" />
+                  <Insets left="10.0" top="8.0" />
                </HBox.margin>
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
             </JFXButton>
          </children>
          <BorderPane.margin>

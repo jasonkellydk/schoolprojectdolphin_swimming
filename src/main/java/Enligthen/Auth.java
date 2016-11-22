@@ -17,14 +17,6 @@ public class Auth {
 
     public boolean Login(String email, String password){
 
-      /*  String hashed = BCrypt.hashpw("test", BCrypt.gensalt());
-        User p = new User();
-        p.set("name", "John Hansen");
-        p.set("email", "john@example.com");
-        p.set("password", hashed);
-        p.set("role", "1");
-        p.saveIt();
-*/
         /*
          * Checks if the email field is filled.
          */

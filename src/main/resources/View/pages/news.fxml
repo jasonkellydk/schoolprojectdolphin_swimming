@@ -10,7 +10,7 @@
    <children>
       <HBox alignment="CENTER" layoutX="213.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="News" textOrigin="CENTER" HBox.hgrow="ALWAYS">
+            <Text fill="#757575" strokeType="OUTSIDE" strokeWidth="0.0" text="News" textOrigin="CENTER" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Helvetica Bold" size="34.0" />
                </font>

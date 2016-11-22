@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -8,12 +10,28 @@
    <children>
       <HBox alignment="CENTER" layoutX="200.0" layoutY="7.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" textAlignment="CENTER" textOrigin="CENTER" HBox.hgrow="ALWAYS">
+            <Text fill="#757575" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" textAlignment="CENTER" textOrigin="CENTER" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Helvetica Bold" size="34.0" />
                </font>
             </Text>
          </children>
       </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="250.0" layoutY="135.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="135.0">
+         <children>
+            <JFXCheckBox prefHeight="35.0" prefWidth="252.0" text="Allow remember me">
+               <font>
+                  <Font name="Helvetica Bold" size="12.0" />
+               </font>
+            </JFXCheckBox>
+            <Label text="membership fee">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField maxWidth="236.0" minWidth="236.0" prefHeight="33.0" prefWidth="236.0" />
+            <JFXButton text="Save" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
