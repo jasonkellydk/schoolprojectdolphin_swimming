@@ -1,22 +1,16 @@
 package Controller;
 
 import Enligthen.Auth;
-import boot.sceneBoot;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import org.javalite.activejdbc.Base;
 
 
 /**
@@ -43,16 +37,13 @@ public class LoginController {
         boolean authenticated = auth.Login(email,password);
 
         if(authenticated){
-            System.out.println("Authenticated");
-            System.out.println(Auth.user().get("name"));
+            System.out.println("The user has been authenticated");
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("View/home.fxml"));
-            BorderPane login = (BorderPane) loader.load();
+            BorderPane login = loader.load();
             Scene scene = new Scene(login);
             stage.setScene(scene);
-            //FXMLLoader loader = new FXMLLoader(getClass().getResource("userSubMenu.fxml"));
-            //Parent userSubMenu = (Parent) loader.load();
-
+            stage.setFullScreen(stage.isFullScreen());
 
         }
 

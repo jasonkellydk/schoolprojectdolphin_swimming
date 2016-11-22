@@ -52,6 +52,10 @@ public class Auth {
         return false;
     }
 
+    public boolean Logout(){
+         name = null;
+        return true;
+    }
 
     public static Model user() {
         return name;

@@ -1,19 +1,18 @@
 package Controller;
 
-import javafx.beans.binding.Bindings;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.fxml.FXML;
+import Enligthen.Auth;
+import com.jfoenix.controls.JFXButton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.layout.Border;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
 
 import java.io.IOException;
-import java.net.URL;
 
 /**
  * Created by jasonkelly on 20/11/2016.
@@ -21,15 +20,73 @@ import java.net.URL;
 public class HomeController {
 
 
-    // root element of home.fxml, injected as usual with fx:id="root"
-    @FXML
-    private BorderPane root;
+    public JFXButton Members;
+    public JFXButton Statistic;
+    public JFXButton Settings;
 
-    public void initialize() throws Exception{
+    // root element of home.fxml, injected as usual with fx:id="rootElement"
+    public BorderPane rootElement;
+    public Label loggedInUser;
+    public JFXButton News;
 
-        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("View/menu.fxml"));
-        HBox userSubMenu = (HBox) loader.load();
-        root.setTop(userSubMenu);
 
-        }
+    /**
+     * Runs at the init of the class
+     * @throws Exception
+     */
+    public void initialize() throws Exception {
+        loggedInUser.setText(Auth.user().getString("name"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HomeController.class.getClassLoader().getResource("View/pages/news.fxml"));
+        AnchorPane view = fxmlLoader.load();
+        rootElement.setCenter(view);
+
+
     }
+
+    /**
+     *
+     * @param actionEvent
+     * @throws IOException
+     */
+    public void handleLogout(ActionEvent actionEvent) throws IOException{
+        Auth auth = new Auth();
+        auth.Logout();
+        FXMLLoader fxmlLoader = new FXMLLoader(HomeController.class.getClassLoader().getResource("View/login.fxml"));
+        BorderPane root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setFullScreen(stage.isFullScreen());
+    }
+
+    public void handleMenuAction(ActionEvent actionEvent) throws IOException {
+
+        if (actionEvent.getSource() == Members) {
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("View/pages/members.fxml"));
+            AnchorPane view = loader.load();
+            rootElement.setCenter(view);
+        }
+        if(actionEvent.getSource() == Statistic)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("View/pages/statistic.fxml"));
+            AnchorPane view = loader.load();
+            rootElement.setCenter(view);
+        }
+        if(actionEvent.getSource() == Settings)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("View/pages/settings.fxml"));
+            AnchorPane view = loader.load();
+            rootElement.setCenter(view);
+        }
+        if(actionEvent.getSource() == News)
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("View/pages/news.fxml"));
+            AnchorPane view = loader.load();
+            rootElement.setCenter(view);
+        }
+
+    }
+}
+
+

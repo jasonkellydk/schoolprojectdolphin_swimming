@@ -15,21 +15,83 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:controller="Controller.HomeController" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
-   <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-   </center>
-   <bottom>
-      <HBox prefHeight="42.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+<BorderPane fx:id="rootElement" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
+   <top>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-padding: 12 12 12 12; -fx-spacing: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
          <children>
-            <Text fill="#757575" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as:" textAlignment="CENTER" textOrigin="CENTER">
+            <JFXButton fx:id="News" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="97.0" prefWidth="131.0" style="-fx-padding: 20px; -fx-background-color: #3F51B5;" text="News" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
                <font>
-                  <Font name="Helvetica Light" size="20.0" />
+                  <Font name="Helvetica Bold" size="13.0" />
                </font>
-               <HBox.margin>
-                  <Insets left="10.0" top="10.0" />
-               </HBox.margin>
-            </Text>
+               <graphic>
+                  <ImageView id="menu-img" fitHeight="61.0" fitWidth="78.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/news.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Members" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="97.0" prefWidth="131.0" style="-fx-padding: 20px; -fx-background-color: #3F51B5;" text="Members" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView id="menu-img" fitHeight="61.0" fitWidth="78.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/member.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Statistic" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="97.0" prefWidth="131.0" style="-fx-padding: 20px; -fx-background-color: #3F51B5;" text="Statistic" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView id="menu-img" fitHeight="61.0" fitWidth="78.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/statistic.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Settings" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="121.0" prefWidth="131.0" style="-fx-padding: 20 20; -fx-background-color: #3F51B5;" text="Settings" textAlignment="CENTER" textFill="#c5cae9" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView id="menu-img" fitHeight="61.0" fitWidth="78.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/settings.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </opaqueInsets>
+            </JFXButton>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </opaqueInsets>
+      </HBox>
+   </top>
+
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="42.0" BorderPane.alignment="BOTTOM_RIGHT">
+         <children>
             <Label fx:id="loggedInUser" text="Label">
                <font>
                   <Font name="Helvetica Bold" size="20.0" />
@@ -37,8 +99,25 @@
                <HBox.margin>
                   <Insets left="4.0" top="6.0" />
                </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </Label>
+            <JFXButton onAction="#handleLogout" style="-fx-background-color: #FF5252;" text="Sign out" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="10.0" top="6.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
          </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
       </HBox>
    </bottom>
 </BorderPane>
