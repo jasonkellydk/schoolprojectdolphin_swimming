@@ -4,7 +4,6 @@ import Enligthen.Auth;
 import boot.sceneBoot;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
