@@ -1,9 +1,7 @@
 package Enligthen;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Properties;
 import java.util.Scanner;
 
 /*
@@ -37,4 +35,43 @@ public class Filesystem {
         }
     }
 
+
+    public String Read(String filename) throws IOException{
+
+        String content = null;
+
+
+        //Get file from resources folder
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(classLoader.getResource(filename).getFile()); //for ex foo.txt
+        FileReader reader = null;
+        try {
+            reader = new FileReader(file);
+            char[] chars = new char[(int) file.length()];
+            reader.read(chars);
+            content = new String(chars);
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(reader !=null){reader.close();}
+        }
+        return content;
+
+    }
+
+
+
+    public Properties Config() throws IOException{
+
+        ClassLoader classLoader = getClass().getClassLoader();
+        FileInputStream input = new FileInputStream(classLoader.getResource(".env").getFile()); //get the .env file
+
+        Properties prop = new Properties();
+        // load a properties file
+        prop.load(input);
+
+        // get the property value and print it out
+        return prop;
+    }
 }

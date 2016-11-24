@@ -36,7 +36,7 @@
                <font>
                   <Font name="Helvetica" size="16.0" />
                </font></JFXPasswordField>
-            <JFXButton fx:id="submit" alignment="CENTER" defaultButton="true" layoutX="101.0" layoutY="293.0" onAction="#Submit" prefHeight="44.0" prefWidth="237.0" style="-fx-background-color: #448AFF; -fx-background-radius: 0;" text="Login" textFill="WHITE">
+            <JFXButton fx:id="submit" alignment="CENTER" defaultButton="true" layoutX="102.0" layoutY="305.0" onAction="#Submit" prefHeight="44.0" prefWidth="237.0" style="-fx-background-color: #448AFF; -fx-background-radius: 0;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="14.0" />
                </font>
@@ -75,7 +75,8 @@
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Text>
-            <JFXSpinner fx:id="loginLoader" layoutX="204.0" layoutY="299.0" visible="false" />
+            <JFXSpinner fx:id="loginLoader" layoutX="204.0" layoutY="311.0" visible="false" />
+            <JFXCheckBox fx:id="rememberMe" checkedColor="#448aff" layoutX="81.0" layoutY="268.0" text="Remember me" textFill="#757575" visible="false" />
          </children>
       </AnchorPane>
    </center>

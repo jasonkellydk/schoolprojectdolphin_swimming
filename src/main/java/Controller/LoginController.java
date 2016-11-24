@@ -1,11 +1,19 @@
 package Controller;
 
 import Enligthen.Auth;
+<<<<<<< HEAD
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXSpinner;
 import com.jfoenix.controls.JFXTextField;
 
+=======
+import Enligthen.Filesystem;
+import com.jfoenix.controls.*;
+import com.sun.deploy.util.Property;
+import com.sun.org.apache.xpath.internal.operations.Bool;
+import javafx.application.Platform;
+>>>>>>> 1f4eb1010bf6ae0f5ea48fee48ce09a93e2a63b5
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;
@@ -20,7 +28,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.javalite.activejdbc.Base;
 
+
 import java.io.IOException;
+
+
+
+import java.util.Properties;
 
 
 
@@ -32,6 +45,7 @@ public class LoginController {
     public Text invalidCredentials;
     public JFXButton submit;
     public JFXSpinner loginLoader;
+    public JFXCheckBox rememberMe;
     @FXML
     private JFXTextField userName;
     @FXML
@@ -41,10 +55,21 @@ public class LoginController {
     private String password;
 
     private Boolean authenticated;
+
+
+
+    public void initialize() throws Exception {
+        Filesystem filesystem = new Filesystem();
+        Properties prop = filesystem.Config();
+        Boolean rememberMeValue = Boolean.parseBoolean(prop.getProperty("ALLOW_REMEMBERME"));
+        rememberMe.setVisible(rememberMeValue);
+
+    }
+
+
     @FXML
     private void Submit(ActionEvent event) throws Exception
     {
-
 
         submit.setText("");
         loginLoader.setVisible(true);
@@ -115,7 +140,7 @@ public class LoginController {
                      * It seems like theres a bug in javafx for Mac that allows the fullscreen mode to flash
                      * https://bugs.openjdk.java.net/browse/JDK-8089209
                      */
-            stage.setFullScreen(false);
+            //stage.setFullScreen(false);
             stage.setScene(scene);
             stage.setFullScreen(fullscreen);
         } catch (IOException e) {
