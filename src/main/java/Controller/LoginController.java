@@ -1,19 +1,15 @@
 package Controller;
 
 import Enligthen.Auth;
-<<<<<<< HEAD
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXSpinner;
 import com.jfoenix.controls.JFXTextField;
 
-=======
+
 import Enligthen.Filesystem;
 import com.jfoenix.controls.*;
-import com.sun.deploy.util.Property;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import javafx.application.Platform;
->>>>>>> 1f4eb1010bf6ae0f5ea48fee48ce09a93e2a63b5
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;
