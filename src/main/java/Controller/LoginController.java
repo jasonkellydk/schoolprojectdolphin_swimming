@@ -57,7 +57,7 @@ public class LoginController {
     public void initialize() throws Exception {
         Filesystem filesystem = new Filesystem();
         Properties prop = filesystem.Config();
-        Boolean rememberMeValue = Boolean.parseBoolean(prop.getProperty("ALLOW_REMEMBERME"));
+        Boolean rememberMeValue = Boolean.parseBoolean(prop.getProperty("ALLOW_REMEMBER"));
         rememberMe.setVisible(rememberMeValue);
 
     }

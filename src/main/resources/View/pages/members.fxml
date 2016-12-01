@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="Controller.MemberController" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER" layoutX="200.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -13,6 +15,19 @@
                   <Font name="Helvetica Bold" size="34.0" />
                </font>
             </Text>
+         </children>
+      </HBox>
+      <HBox layoutY="93.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="287.0">
+               <children>
+                  <JFXTextField fx:id="memberName" promptText="Name" />
+                  <JFXTextField fx:id="memberEmail" promptText="Email" />
+                  <JFXPasswordField fx:id="memberPassword" promptText="Password" />
+                  <JFXPasswordField fx:id="memberRepeatPassword" promptText="Repeat password" />
+                  <JFXButton onAction="#create" buttonType="RAISED" text="Add user" />
+               </children>
+            </VBox>
          </children>
       </HBox>
    </children>

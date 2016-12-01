@@ -19,6 +19,7 @@ public class Validation {
         Pattern pattern = Pattern.compile(EMAIL_REGIX);
         Matcher matcher = pattern.matcher(email);
 
+
         return ((!email.isEmpty()) && (email!=null) && (matcher.matches()));
     }
 
@@ -28,7 +29,22 @@ public class Validation {
      * @return Boolean
      */
     public Boolean vMinLength(String text, int length){
+
         if(!(text.length() >= length)){
+            return false;
+        }
+
+
+        return true;
+    }
+
+    /**
+     * @param password
+     * @param passwordRepeat
+     * @return Boolean
+     */
+    public Boolean vPassword(String password, String passwordRepeat){
+        if(!password.equals(passwordRepeat)){
             return false;
         }
 

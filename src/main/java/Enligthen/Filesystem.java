@@ -74,4 +74,10 @@ public class Filesystem {
         // get the property value and print it out
         return prop;
     }
+
+    public FileOutputStream ConfigPath() throws  IOException{
+        ClassLoader classLoader = getClass().getClassLoader();
+        FileOutputStream input = new FileOutputStream(classLoader.getResource(".env").getFile()); //get the .env file
+        return input;
+    }
 }
