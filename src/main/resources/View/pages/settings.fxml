@@ -36,64 +36,51 @@
             <Insets left="20.0" />
          </padding>
       </HBox>
-      <Pane layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="580.0" style="-fx-background-color: #448AFF;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="111.0">
+      <HBox alignment="CENTER" layoutY="273.0" maxHeight="1.7976931348623157E308" prefHeight="60.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="273.0">
          <children>
-            <Label layoutX="14.0" layoutY="12.0" text="Change settings" textFill="WHITE">
+            <Label text="Membership fee" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Helvetica Bold" size="13.0" />
                </font>
             </Label>
+            <JFXTextField fx:id="memberFee" maxHeight="-Infinity" maxWidth="164.0" minWidth="80.0" prefHeight="33.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+            <Text fx:id="currency" strokeType="OUTSIDE" strokeWidth="0.0" text="DKK" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </Text>
          </children>
-      </Pane>
-      <Pane layoutY="147.0" prefHeight="253.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="150.0">
+      </HBox>
+      <HBox alignment="CENTER" layoutY="252.0" maxHeight="1.7976931348623157E308" prefHeight="81.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
          <children>
-            <HBox alignment="CENTER" layoutY="30.0" maxHeight="1.7976931348623157E308" prefHeight="33.0" prefWidth="580.0">
-               <children>
-                  <Label text="Membership fee" HBox.hgrow="ALWAYS">
-                     <font>
-                        <Font name="Helvetica Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <JFXTextField fx:id="memberFee" maxHeight="-Infinity" maxWidth="164.0" minWidth="80.0" prefHeight="33.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
-                  <Text fx:id="currency" strokeType="OUTSIDE" strokeWidth="0.0" text="DKK" HBox.hgrow="ALWAYS">
-                     <HBox.margin>
-                        <Insets top="15.0" />
-                     </HBox.margin>
-                  </Text>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" layoutY="63.0" maxHeight="1.7976931348623157E308" prefHeight="50.0" prefWidth="580.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Allow remember me login" HBox.hgrow="ALWAYS">
-                     <font>
-                        <Font name="Helvetica Bold" size="13.0" />
-                     </font>
-                  </Text>
-                  <JFXCheckBox fx:id="rememberSetting" checkedColor="#448aff" prefHeight="35.0" prefWidth="80.0" text="Allow" HBox.hgrow="ALWAYS">
-                     <font>
-                        <Font name="Helvetica Bold" size="12.0" />
-                     </font>
-                  </JFXCheckBox>
-               </children>
-            </HBox>
-            <VBox alignment="CENTER" layoutY="133.0" prefHeight="100.0" prefWidth="580.0" spacing="1.0" style="-fx-background-color: #FFFFFF;">
-               <children>
-                  <Text fx:id="saveMessage" fill="#5abc46" strokeType="OUTSIDE" strokeWidth="0.0" text="Saved!" visible="false">
-                     <font>
-                        <Font name="Helvetica" size="13.0" />
-                     </font>
-                  </Text>
-                  <JFXButton buttonType="RAISED" onAction="#update" prefHeight="26.0" prefWidth="212.0" style="-fx-background-color: #448AFF;" text="Save" textFill="WHITE">
-                     <font>
-                        <Font name="Helvetica" size="13.0" />
-                     </font>
-                  </JFXButton>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="20.0" top="10.0" />
-               </padding>
-            </VBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Allow remember me login" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Helvetica Bold" size="13.0" />
+               </font>
+            </Text>
+            <JFXCheckBox fx:id="rememberSetting" checkedColor="#448aff" prefHeight="35.0" prefWidth="80.0" text="Allow" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Helvetica Bold" size="12.0" />
+               </font>
+            </JFXCheckBox>
          </children>
-      </Pane>
+      </HBox>
+      <VBox alignment="CENTER" layoutY="339.0" prefHeight="60.0" prefWidth="600.0" spacing="1.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="339.0">
+         <children>
+            <Text fx:id="saveMessage" fill="#5abc46" strokeType="OUTSIDE" strokeWidth="0.0" text="Saved!" visible="false">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Text>
+            <JFXButton buttonType="RAISED" onAction="#update" prefHeight="76.0" prefWidth="191.0" style="-fx-background-color: #448AFF;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica" size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </padding>
+      </VBox>
    </children>
 </AnchorPane>

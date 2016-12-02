@@ -20,7 +20,7 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
    <left>
-      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="409.0" prefWidth="129.0" style="-fx-padding: 12 12 12 12; -fx-spacing: 10; -fx-background-color: #004bcc;" BorderPane.alignment="CENTER">
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="409.0" prefWidth="129.0" style="-fx-padding: 12 12 12 12; -fx-spacing: 10;" BorderPane.alignment="CENTER">
          <children>
             <JFXButton fx:id="News" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" onAction="#handleMenuAction" prefHeight="120.0" prefWidth="90.0" style="-fx-background-color: #3F51B5; -fx-border-radius: 0;" text="News" textAlignment="CENTER" textFill="#bdbdbd" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
                <font>

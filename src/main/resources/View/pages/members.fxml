@@ -1,34 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:controller="Controller.MemberController" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MemberController">
    <children>
-      <HBox alignment="CENTER" layoutX="200.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Text fill="#757575" strokeType="OUTSIDE" strokeWidth="0.0" text="Members">
-               <font>
-                  <Font name="Helvetica Bold" size="34.0" />
-               </font>
-            </Text>
-         </children>
-      </HBox>
       <HBox layoutY="93.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="287.0">
+            <VBox fx:id="membersVbox" alignment="TOP_CENTER" prefHeight="300.0" prefWidth="294.0" style="-fx-padding: 10px;" HBox.hgrow="ALWAYS" />
+            <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="287.0" style="-fx-padding: 10;" HBox.hgrow="ALWAYS">
                <children>
                   <JFXTextField fx:id="memberName" promptText="Name" />
                   <JFXTextField fx:id="memberEmail" promptText="Email" />
                   <JFXPasswordField fx:id="memberPassword" promptText="Password" />
                   <JFXPasswordField fx:id="memberRepeatPassword" promptText="Repeat password" />
-                  <JFXButton onAction="#create" buttonType="RAISED" text="Add user" />
+                  <JFXButton buttonType="RAISED" onAction="#create" prefHeight="37.0" prefWidth="245.0" style="-fx-background-color: #448AFF;" text="Add user" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica" size="17.0" />
+                     </font></JFXButton>
                </children>
             </VBox>
          </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="210.0" layoutY="17.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="306.0">
+               <children>
+                  <Text fill="#3c3c3c" strokeType="OUTSIDE" strokeWidth="0.0" text="Members" textAlignment="CENTER" textOrigin="CENTER">
+                     <font>
+                        <Font name="Helvetica Bold" size="34.0" />
+                     </font>
+                  </Text>
+                  <Label text="Control your members, before they control you" textFill="#bdbdbd" />
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
       </HBox>
    </children>
 
