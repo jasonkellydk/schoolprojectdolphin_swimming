@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import com.jfoenix.controls.*?>
@@ -7,12 +8,56 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="470.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="501.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NewsController">
    <children>
-      <Text layoutX="396.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NEWS">
-         <font>
-            <Font name="Helvetica Bold" size="40.0" />
-         </font>
-      </Text>
+      <HBox alignment="CENTER_LEFT" layoutX="220.0" layoutY="27.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="306.0">
+               <children>
+                  <Text fill="#3c3c3c" strokeType="OUTSIDE" strokeWidth="0.0" text="News" textAlignment="CENTER" textOrigin="CENTER">
+                     <font>
+                        <Font name="Helvetica Bold" size="34.0" />
+                     </font>
+                  </Text>
+                  <Label text="whats up in the swimming club" textFill="#bdbdbd" />
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="23.0" layoutY="111.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <VBox fx:id="newsVbox" alignment="TOP_CENTER" prefHeight="401.0" prefWidth="380.0" spacing="5.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="TOP_CENTER" prefHeight="401.0" prefWidth="419.0" spacing="20.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Heading">
+                     <font>
+                        <Font name="Helvetica Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="newsHeading" />
+                  <Label text="Body">
+                     <font>
+                        <Font name="Helvetica Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="newsBody" />
+                  <JFXButton onAction="#create" style="-fx-background-color: #448AFF;" text="Add news" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica" size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

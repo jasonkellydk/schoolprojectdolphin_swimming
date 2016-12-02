@@ -97,7 +97,16 @@ public class MemberController {
         p.set("password", hashed);
         p.set("role_id", "1");
         p.saveIt();
+        /*
+         * Reload the list and clear values
+         */
         GetMembers();
+        memberEmail.setText("");
+        memberName.setText("");
+        memberPassword.setText("");
+        memberRepeatPassword.setText("");
+
+
         return true;
     }
 }
