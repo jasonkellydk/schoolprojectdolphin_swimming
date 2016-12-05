@@ -1,3 +1,9 @@
 target
 src/test/
 /.idea/
+/domain_model.vpp*
+/EER diagram and sql.mwb*
+/src/main/resources/database.properties
+/src/main/resources/.env
+/src/main/deploy*
+/database.sql;

@@ -1,9 +1,0 @@
-development.driver=com.mysql.jdbc.Driver
-development.username=root
-development.password=
-development.url=jdbc:mysql://localhost:3306/dolphin_db
-
-development.driver=com.mysql.jdbc.Driver
-development.username=jasonkel_dolphin
-development.password=JAILsd1
-development.url=jdbc:mysql://server1.jcr-hosting.dk:3306/jasonkel_dolphin
