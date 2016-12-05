@@ -40,7 +40,6 @@ public class Filesystem {
 
         String content = null;
 
-
         //Get file from resources folder
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource(filename).getFile()); //for ex foo.txt
@@ -65,12 +64,11 @@ public class Filesystem {
     public Properties Config() throws IOException{
 
         ClassLoader classLoader = getClass().getClassLoader();
-        FileInputStream input = new FileInputStream(classLoader.getResource(".env").getFile()); //get the .env file
 
+        FileInputStream input = new FileInputStream(classLoader.getResource(".env").getFile()); //get the .env file
         Properties prop = new Properties();
         // load a properties file
         prop.load(input);
-
         // get the property value and print it out
         return prop;
     }

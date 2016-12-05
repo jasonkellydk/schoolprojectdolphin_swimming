@@ -1,6 +1,5 @@
-package boot; /**
- * Created by jasonkelly on 14/11/2016.
- */
+package boot;
+
 
 import Controller.HomeController;
 import Enligthen.Filesystem;
@@ -60,10 +59,6 @@ public class Bootstrap extends Application{
         launch(args);
 
     }
-
-
-
-
 
 
 
