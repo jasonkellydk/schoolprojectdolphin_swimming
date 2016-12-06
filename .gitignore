@@ -7,3 +7,4 @@ src/test/
 /src/main/resources/.env
 /src/main/deploy*
 /database.sql;
+Dolphin_swimming.iml
