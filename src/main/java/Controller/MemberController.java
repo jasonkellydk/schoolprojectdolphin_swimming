@@ -11,7 +11,9 @@ import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.javalite.activejdbc.Base;
 import org.javalite.activejdbc.Model;
@@ -29,9 +31,12 @@ public class MemberController {
     public JFXPasswordField memberPassword;
     public JFXPasswordField memberRepeatPassword;
     public VBox membersVbox;
+    public VBox adminOnly;
 
     public void initialize() throws Exception {
-
+        if(Auth.user().getInteger("role_id") != 1){
+            adminOnly.getChildren().clear();
+        }
         GetMembers();
 
     }

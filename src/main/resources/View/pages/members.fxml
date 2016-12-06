@@ -12,7 +12,7 @@
       <HBox layoutY="93.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
             <VBox fx:id="membersVbox" alignment="TOP_CENTER" prefHeight="300.0" prefWidth="294.0" style="-fx-padding: 10px;" HBox.hgrow="ALWAYS" />
-            <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="287.0" style="-fx-padding: 10;" HBox.hgrow="ALWAYS">
+            <VBox fx:id="adminOnly" alignment="TOP_CENTER" prefHeight="300.0" prefWidth="287.0" style="-fx-padding: 10;" HBox.hgrow="ALWAYS">
                <children>
                   <JFXTextField fx:id="memberName" promptText="Name" />
                   <JFXTextField fx:id="memberEmail" promptText="Email" />

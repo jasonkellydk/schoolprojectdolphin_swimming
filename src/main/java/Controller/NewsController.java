@@ -31,8 +31,12 @@ public class NewsController {
  
     public JFXTextField newsHeading;
     public JFXTextArea newsBody;
+    public VBox adminOnly;
 
     public void initialize() throws Exception {
+        if(Auth.user().getInteger("role_id") != 1){
+            adminOnly.getChildren().clear();
+        }
         GetNews();
     }
 

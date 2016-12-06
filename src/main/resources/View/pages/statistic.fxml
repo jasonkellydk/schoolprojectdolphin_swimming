@@ -1,18 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StatisticController">
    <children>
-      <HBox alignment="CENTER" layoutX="32.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" layoutX="230.0" layoutY="37.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text fill="#757575" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistic">
-               <font>
-                  <Font name="Helvetica Bold" size="34.0" />
-               </font>
-            </Text>
+            <VBox prefHeight="100.0" prefWidth="306.0">
+               <children>
+                  <Text fill="#3c3c3c" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics" textAlignment="CENTER" textOrigin="CENTER">
+                     <font>
+                        <Font name="Helvetica Bold" size="34.0" />
+                     </font>
+                  </Text>
+                  <Label text="Swimming statistics for your training" textFill="#bdbdbd" />
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="33.0" layoutY="121.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="401.0" prefWidth="380.0" spacing="5.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="TOP_CENTER" prefHeight="401.0" prefWidth="419.0" spacing="20.0" style="-fx-padding: 10;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Information">
+                     <font>
+                        <Font name="Helvetica Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXCheckBox text="Turnament" />
+                        <JFXTextField alignment="CENTER" maxWidth="82.0" minWidth="82.0" prefHeight="33.0" prefWidth="82.0" promptText="Time">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <Label text="Disciplins">
+                     <font>
+                        <Font name="Helvetica Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="Hboxdiciplins" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+                  <Label text="User">
+                     <font>
+                        <Font name="Helvetica Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="HboxUsers" alignment="CENTER" prefHeight="200.0" prefWidth="281.0" />
+                  <JFXButton style="-fx-background-color: #448AFF;" text="Add time" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
          </children>
       </HBox>
    </children>

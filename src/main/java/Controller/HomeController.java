@@ -35,6 +35,11 @@ public class HomeController {
      * @throws Exception
      */
     public void initialize() throws Exception {
+
+        if(Auth.user().getInteger("role_id") != 1){
+            Settings.setVisible(false);
+        }
+
         loggedInUser.setText(Auth.user().getString("name"));
 
         FXMLLoader fxmlLoader = new FXMLLoader(HomeController.class.getClassLoader().getResource("View/pages/news.fxml"));

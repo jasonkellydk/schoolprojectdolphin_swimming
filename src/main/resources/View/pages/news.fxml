@@ -36,7 +36,7 @@
       <HBox layoutX="23.0" layoutY="111.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
             <VBox fx:id="newsVbox" alignment="TOP_CENTER" prefHeight="401.0" prefWidth="380.0" spacing="5.0" HBox.hgrow="ALWAYS" />
-            <VBox alignment="TOP_CENTER" prefHeight="401.0" prefWidth="419.0" spacing="20.0" HBox.hgrow="ALWAYS">
+            <VBox fx:id="adminOnly" alignment="TOP_CENTER" prefHeight="401.0" prefWidth="419.0" spacing="20.0" HBox.hgrow="ALWAYS">
                <children>
                   <Label text="Heading">
                      <font>

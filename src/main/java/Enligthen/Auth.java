@@ -22,7 +22,6 @@ public class Auth {
      */
     public boolean Login(String email, String password){
 
-
         /*
          * This is the enlighten email validator class.
          * It accepts different email validation parameters.
@@ -30,7 +29,6 @@ public class Auth {
         Validation val = new Validation();
         if(!val.vEmail(email)){return false;}
         if(!val.vMinLength(password,4)){return false;}
-
 
             User authUser = User.findFirst("email = ?",email);
             if(authUser != null){
